@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_courses.view.*
-import kotlinx.android.synthetic.main.row_courses_item.view.*
 
 
 class CoursesRecyclerViewAdapter(val coursesList: List<Courses>
@@ -30,6 +29,12 @@ class CoursesRecyclerViewAdapter(val coursesList: List<Courses>
     class NamesViewHolder(val rowView: View) : RecyclerView.ViewHolder(rowView)
 }
 
-class Courses {
+class Courses(
+    i: Int,
+    s: String,
+    i1: Int,
+    s1: String,
+    s2: String
+) {
 
 }
