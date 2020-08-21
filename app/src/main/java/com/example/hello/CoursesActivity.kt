@@ -12,8 +12,7 @@ class CoursesActivity : AppCompatActivity() {
         rvCourses.id = LinearLayoutManager1(this.baseContext)
         val coursesRecyclerViewAdapter = CoursesRecyclerViewAdapter(coursesList = listOf(
 
-            Courses(10,
-                "Python",110,"Grade","Excellent"),
+            Courses(10,"Python",110,"Grade","Excellent"),
             Courses(20,"Kotlin",120,"Grade","Excellent"),
             Courses(30,"Javascript",130,"Grade","Excellent"),
             Courses(40,"UI/UX Development",140,"Grade","Excellent"),
@@ -28,6 +27,38 @@ class CoursesActivity : AppCompatActivity() {
 
         ))
         rvCourses.id= coursesRecyclerViewAdapter
+
+        fetchCourses()
+    }
+
+    fun fetchCourses() {
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(baseContext)
+        val accessToken = sharedPreferences.getString("ACCESS_TOKEN_KEY", "")
+
+        val apiClient = ApiClient.buildService(ApiInterface::class.java)
+        val coursesCall = apiClient.getCourses("Bearer " + accessToken)
+        coursesCall.enqueue(object : Callback<CoursesResponse> {
+            override fun onFailure(call: Call<CoursesResponse>, t: Throwable) {
+                Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
+            }
+
+            override fun onResponse(
+                call: Call<CoursesResponse>,
+                response: Response<CoursesResponse>
+            ) {
+                if (response.isSuccessful) {
+                    var courseList = response.body()?.courses as List<Course>
+                    var coursesAdapter = CoursesAdapter(courseList)
+                    rvCourses.layoutManager = LinearLayoutManager(baseContext)
+                    rvCourses.adapter = coursesAdapter
+                } else {
+                    Toast.makeText(baseContext, response.errorBody().toString(), Toast.LENGTH_LONG)
+                        .show()
+                }
+            }
+        })
+    }
+}
     }
 }
 

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <TextView
+        android:id="@+id/tvCourseName"
+        android:layout_width="125dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:text="Course Name:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvAndroidAppDevelopment"
+        android:layout_width="254dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="Android App Development"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvCourseName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCourseCode"
+        android:layout_width="125dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="Course Code:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCourseName" />
+
+    <TextView
+        android:id="@+id/tvAND101"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="AND 101"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toEndOf="@+id/tvCourseCode"
+        app:layout_constraintTop_toBottomOf="@+id/tvAndroidAppDevelopment" />
+
+    <TextView
+        android:id="@+id/tvInstructor"
+        android:layout_width="125dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="Instructor:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCourseCode" />
+
+    <TextView
+        android:id="@+id/tvTerryMungai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="Terry Mungai"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toEndOf="@+id/tvInstructor"
+        app:layout_constraintTop_toBottomOf="@+id/tvAND101" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="124dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="Description:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstructor" />
+
+    <TextView
+        android:id="@+id/tvLearnToBuildAndroidApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="Learn to build android app"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toEndOf="@+id/tvDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvTerryMungai" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

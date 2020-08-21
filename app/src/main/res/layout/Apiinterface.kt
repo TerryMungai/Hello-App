@@ -15,4 +15,3 @@ class RequestBody {
 annotation class POST(val value: String)
 
 annotation class Body
-}
