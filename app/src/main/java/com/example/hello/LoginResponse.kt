@@ -11,7 +11,7 @@ class LoginResponse {
 
         loginCall.enqueue(object :Callback<LoginResponse> {
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
+                .makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
             }
 
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
