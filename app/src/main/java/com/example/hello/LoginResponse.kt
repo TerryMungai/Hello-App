@@ -1,36 +1,9 @@
 package com.example.hello
 
-import layout.ApiClient
-import layout.ApiInterface
-import layout.RequestBody
+import layout.SerializedName
 
-class LoginResponse {
-    fun loginUser(requestBody: RequestBody){
-        val apiClient = ApiClient.buildService(ApiInterface::class.java)
-        val loginCall = apiClient.loginStudent(requestBody)
+class LoginResponse (
+    @SerializedName("access_token") var accessToken: String,
+    @SerializedName("message") var message: String
+    )
 
-        loginCall.enqueue(object :Callback<LoginResponse> {
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                .makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
-            }
-
-            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-                if (response.isSuccessful){
-                    Toast.makeText(baseContext, response.body()?.message, Toast.LENGTH_LONG).show()
-                    var accessToken = response.body()?.accessToken
-                    var sharedPreferences = PreferenceManager.getDefaultSharedPreferences(baseContext)
-                    var editor = sharedPreferences.edit()
-                    editor.putString("ACCESS_TOKEN_KEY", accessToken)
-                    editor.apply()
-                    val intent = Intent(baseContext, CoursesActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-                else{
-                    Toast.makeText(baseContext, response.errorBody().toString(), Toast.LENGTH_LONG).show()
-                }
-            }
-        })
-    }
-}
-}

@@ -9,13 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity"></activity>
-        <activity android:name=".MainActivity2" />
-        <activity android:name=".Apiinterface" />
-        <activity android:name=".RegestrationResponse" />
-        <activity android:name=".Student" />
-        <activity android:name=".CoursesActivity" />
-        <activity android:name=".RegistrationActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".Apiinterface" />
+        <activity android:name=".RegestrationResponse" />
+        <activity android:name=".Student" />
+        <activity android:name=".CoursesActivity" />
+        <activity android:name=".RegistrationActivity" />
     </application>
 
 </manifest>

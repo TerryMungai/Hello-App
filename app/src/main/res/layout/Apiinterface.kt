@@ -6,7 +6,8 @@ import android.telecom.Call
 interface ApiInterface {
         @POST("register")
         fun registerStudent(@Body requestBody: RequestBody)
-    }
+    abstract fun loginStudent(body: Any): Any
+}
 
 class RequestBody {
 
