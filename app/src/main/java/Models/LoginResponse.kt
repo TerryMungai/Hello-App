@@ -1,4 +1,4 @@
-package com.example.hello
+package Models
 
 import layout.SerializedName
 

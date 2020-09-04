@@ -1,5 +1,6 @@
-package com.example.hello
+package Models
 
+import com.example.hello.Course
 import layout.SerializedName
 
 class CoursesResponse {

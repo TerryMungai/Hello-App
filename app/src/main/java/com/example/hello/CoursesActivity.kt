@@ -1,6 +1,6 @@
 package com.example.hello
 
-import android.graphics.drawable.Drawable
+import Models.Course
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.telecom.Call
@@ -11,17 +11,30 @@ import layout.ApiClient
 import layout.ApiInterface
 import javax.security.auth.callback.Callback
 import androidx.recyclerview.widget.LinearLayoutManager as LinearLayoutManager1
-import com.example.hello.CoursesResponse as ExampleHelloCoursesResponse
+import Models.CoursesResponse as ExampleHelloCoursesResponse
 
 class CoursesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_courses)
         var courseList = listOf<Course>(
-            Course("1", "Python", "PY 101", "James Neumann", "Python Intro"),
-            Course("2", "Android", "AND 201", "Anne Elson", "Android development training"),
-            Course("3", "Database", "DB 304", "Kamwe Wema", "Database administration and development"),
-            Course("4", "Network", "DIS 202", "Betty Crocker", "Netwok Config for modern apps")
+            Models.Course("1", "Python", "PY 101", "James Neumann", "Python Intro"),
+            Models.Course("2", "Android", "AND 201", "Anne Elson", "Android development training"),
+            Models.Course(
+                "3",
+                "Database",
+                "DB 304",
+                "Kamwe Wema",
+                "Database administration and development"
+            ),
+            Models.Course(
+                "4",
+                "Network",
+                "DIS 202",
+                "Betty Crocker",
+                "Netwok Config for modern apps"
+            )
+            Course( s: "5", s1: "Network", s2: "ADN 203", s3:)
         )
         rvCourses.id = LinearLayoutManager1(this.baseContext)
         rvCourses.id = CoursesAdapter(courseList)
