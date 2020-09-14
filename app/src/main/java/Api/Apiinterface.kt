@@ -1,7 +1,8 @@
-package com.example.hello
+package Api
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.hello.R
 
 class Apiinterface : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

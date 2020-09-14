@@ -8,5 +8,6 @@ class Student (
     @SerializedName("last_name") var lastName: String,
     @SerializedName("email") var email: String,
     @SerializedName("phone_number") var phoneNumber: String,
+    @SerializedName(value:"password_number") var password: String,
     @SerializedName("image_url") var imageUrl: String
 )
